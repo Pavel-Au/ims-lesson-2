@@ -1,0 +1,25 @@
+:root {
+  --main-bd-color: 1px solid #dee2e6;
+}
+
+.data-table {
+  cursor: pointer;
+  border-collapse: collapse;
+  width: 100%;
+  border: var(--main-bd-color);
+}
+
+.data-table td {
+  border-top: var(--main-bd-color);
+  padding: 10px;
+}
+
+.half-data-selected {
+  outline: var(--main-bd-color);
+  outline-width: 10px;
+}
+
+.all-data-selected {
+  outline: var(--main-bd-color);
+  outline-width: 20px;
+}

@@ -1,9 +1,13 @@
-import './App.css';
+import "./App.css";
+import { DataTable } from "./components";
+import { animalsData } from "./dataModel";
 
-function App() {
-  return (
-    <div className="App">Component</div>
-  );
-}
-
-export default App;
+export const App = () => (
+  <div className="App">
+    {animalsData && animalsData.length ? (
+      <DataTable dataSet={animalsData} />
+    ) : (
+      <h2>There is no data...</h2>
+    )}
+  </div>
+);
