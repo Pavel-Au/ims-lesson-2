@@ -6,11 +6,16 @@ export class DataTable extends PureComponent {
   constructor(props) {
     super(props);
 
+    const extendedData = (this.props.dataSet || []).map((row) => ({
+      ...row,
+      active: false,
+    }));
+
     this.state = {
       selectRowTimeIntervalId: null,
       totalRows: this.props.dataSet.length,
-      selectedRows: this.getSelectedRowsCount(this.props.dataSet),
-      data: this.props.dataSet || [],
+      selectedRows: this.getSelectedRowsCount(extendedData),
+      data: extendedData,
     };
   }
 
